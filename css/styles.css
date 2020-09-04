@@ -1,0 +1,326 @@
+html {
+  box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/*GLOBALES*/
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+h1,h2,h3,h4{font-family: 'PT Sans', sans-serif; }
+
+h1{font-size: 4.6rem;}
+h2{
+    font-size: 4rem;
+    line-height: 1.1;
+}
+h3{font-size: 3.2rem;}
+h4{font-size: 2.8rem;}
+img{max-width: 100%;}
+/*UTILIDADES*/
+.centrar-texto{text-align: center;}
+.m-0{margin: 0;}
+/*GRID*/
+@media (min-width: 768px){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centrar-columnas{
+        justify-content: center;
+    }
+    .columnas-4{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12{
+        flex: 0 0 100%;
+    }
+}
+/*BOTONES*/
+.btn{
+    border: 0;
+    color: #fff;
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    padding: 1rem 3rem;
+    flex: 0 0 100%;
+}
+.btn:hover{
+    cursor: pointer;
+}
+@media (min-width: 768px){
+    .btn{
+        display: inline-block;
+    }
+    .btn{
+        flex: 0 0 auto;
+    }
+}
+
+.btn-primario{background-color: #f26419;}
+.btn-primario:hover{background-color: #fa7921;}
+.btn-secundario{background-color: #39b54a;}
+.btn-secundario:hover{background-color: #069e2d;}
+
+/*HEADER*/
+@media (min-width: 768px){
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header .navbar{
+    background-color: #fff;
+    }
+    .header .navegacion{
+    margin-right: 28px;
+    }
+}
+.header{
+    background-color: rgba(3,56,0,.8);
+    color: #fff;
+    height: 40rem;
+}
+.header a{
+    text-decoration: none;
+}
+.header h1{
+    color: #262626;
+    font-weight: 400;
+    text-align: center;
+}
+.header span{
+    color: #069e2d;
+    font-weight: 700;
+}
+@media (max-width: 768px){
+    .header .navbar{
+    background-color: #fff;
+    }
+}
+
+/*NAVEGACIÓN*/
+.navegacion a{
+    color: #262626;
+    display: block;
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 768px){
+    .navegacion a{
+        display: inline;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type{
+        margin: 0;
+    }
+    .navegacion a:hover{
+    color: #71B100;
+    border-bottom: 2px solid #e4572e;
+}
+}
+/*TEXTO HEADER*/
+.texto-header{
+    text-align: center;
+    margin-top: 4rem;
+}
+@media (min-width: 768px){
+    .texto-header{
+        margin-top: 12rem;
+    }
+}
+
+.texto-header p{font-size: 2rem;}
+/*Contenido Principal*/
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog,
+.cursos{
+    flex: 0 0 100%;
+}
+@media (min-width: 768px){
+    .contenido-principal{
+        justify-content: space-between;
+    }
+    .blog{
+        flex-basis: 66.6%;
+    }
+    .cursos{
+        flex-basis: calc(33.3% - 4rem);
+    }
+}
+
+/*CURSOS*/
+.curso-lista{
+    padding: 0;
+    list-style: none;
+}
+.curso{
+    border-bottom: 1px solid #e1e1e1;
+}
+.curso:last-of-type{
+    border-bottom: none;
+}
+.curso p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.curso p span,
+.curso p.descripcion{
+    font-weight: 400;
+}
+@media (max-width: 768px){
+    .cursos h2,
+    .curso-lista h4,
+    .curso-lista p{
+        text-align: center;
+    }
+    .cursos .curso-lista{
+        background-color: #e1e1e1;
+    }
+}
+
+/*Newsletter*/
+@media (max-width: 768px) {
+    .content {
+     display: none;
+    }
+}
+.content {
+    max-width: 350px;
+    width: auto;
+    padding: 20px;
+    background: #ddd;
+    border-radius: 8px;
+}
+.content p {
+    font-weight: 400;
+}
+input[type='email'] {
+    display: inline-block;
+    width: 65%;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type='email']:focus {
+    border: 2px solid #aaa;
+}
+.button {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid transparent;
+}
+.button:hover {
+    border: 2px solid #aaa;
+}
+/*Redes Sociales*/
+.redes-sociales{
+    margin-top: 5rem;
+    text-align: center;
+/*
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+*/
+}
+.redes-sociales .icono{
+    background: #cbcbcb;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 45px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+.redes-sociales .twitter{background: #1da1f2;}
+.redes-sociales .facebook{background: #3b5998; margin-top: 12px;}
+.redes-sociales .instagram{background: #3f69a5; margin-top: 12px;}
+@media (max-width: 768px){
+    .redes-sociales{
+        margin-top: 0rem;
+    }
+}
+/*Footer*/
+.footer{
+    background-color: rgba(3,56,0,.8);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+.footer p{
+    color: #e1e1e1;
+    font-size: 1.8rem;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.footer p span{font-weight: 700;}
+/*CONTACTO*/
+.formulario-contacto{
+    background-color: #fcfcfc;
+    padding: 5rem;
+}
+.campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.formulario-contacto .campo label{
+    flex: 0 0 8rem;
+}
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea{
+    border: 1px solid #e1e1e1;
+    flex: 1;
+    padding: 1rem;
+}
+.formulario-contacto textarea{
+    height: 20rem;
+    resize: none;
+}
+.formulario-contacto .enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 768px){
+.formulario-contacto{
+    margin-top: -10rem;
+    }
+}
